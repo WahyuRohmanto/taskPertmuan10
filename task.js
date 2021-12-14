@@ -10,16 +10,9 @@ const showDownload = (result) => {
  * Fungsi untuk download file
  * @param {function} callback - Function callback show
  */
-//   function download(callShowDownload) {
-//     setTimeout(function () {
-//       const result = "windows-10.exe";
-//       callShowDownload(result);
-//     }, 3000);
-//   }
-
 const download = () => {
-  return new Promise(function (resolve, reject) {
-    setTimeout(function () {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
       const result = "windows-10.exe";
       const status = true;
       if (status) {
@@ -32,10 +25,10 @@ const download = () => {
 };
 
 download()
-  .then(function (result) {
+  .then((result) => {
     return showDownload(result);
   })
-  .catch(function (err) {
+  .catch((err) => {
     console.log(err);
   });
 
